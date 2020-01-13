@@ -1,9 +1,9 @@
 {
-  "name": "vuestic-admin",
-  "version": "2.0.0",
+  "name": "ZKTNotify",
+  "version": "1.0.0",
   "private": false,
-  "description": "Vue.js admin template",
-  "author": "smartapant <smartapant@gmail.com>",
+  "description": "ZKTNotify web interface",
+  "author": "fylos <fyl.root@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve --host 0.0.0.0 --port 4998",
     "build": "vue-cli-service build",
@@ -87,6 +87,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/epicmaxco/vuestic-admin.git"
+    "url": "https://github.com/zktnotify/web.git"
   }
 }

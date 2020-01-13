@@ -38,10 +38,6 @@
     <va-button type="submit" class="my-0">{{ $t('auth.signup') }}</va-button>
   </div>
 
-	<va-button class="ma-0" color="primary" slot="trigger" @click="launchToast">
-		{{ $t('notificationsPage.toasts.launchToast') }}
-	</va-button> 
-
 </form>
 </template>
 
@@ -116,9 +112,6 @@ export default {
     },
   },
   computed: {
-    isToastContentPresent () {
-      return !!(this.toastText || this.toastIcon)
-    },
     formReady () {
       return !(this.accountErrors.length || this.passwordErrors.length)
     },
