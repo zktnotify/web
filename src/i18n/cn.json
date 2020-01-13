@@ -1,0 +1,12 @@
+{
+	"auth": {
+		"agree": "我同意",
+		"createAccount": "创建账号",
+		"account": "帐号",
+		"mobile": "手机号码",
+		"login": "登录",
+		"password": "密码",
+		"signup": "注册",
+		"token": "wxpusher帐号"
+	}
+}
