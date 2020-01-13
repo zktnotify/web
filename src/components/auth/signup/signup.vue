@@ -48,12 +48,12 @@ import Notification from './notification'
 export default {
   name: 'signup',
   components: {
-		Notification,
+    Notification,
   },
   data () {
     return {
-			token: 'x',
-			mobile: '',
+      token: 'x',
+      mobile: '',
       account: '',
       password: '',
       mobileErrors: [],
@@ -67,13 +67,13 @@ export default {
       isToastFullWidth: false,
     }
   },
-	mounted: function() {
-		this.getToken()
-	},
+  mounted: function () {
+    this.getToken()
+  },
   methods: {
-		getToken() {
-			this.token = this.$route.query.uid
-		},
+    getToken () {
+      this.token = this.$route.query.uid
+    },
     onsubmit () {
       this.accountErrors = this.account ? [] : ['Account is required']
       this.passwordErrors = this.password ? [] : ['Password is required']
@@ -81,34 +81,34 @@ export default {
         return
       }
 
-			this.$axios.post("/api/wxpusher/signup", {
-				token: this.token,
-				mobile: this.mobile,
-				account: this.account,
-				password: this.password,
-			})
-			.then(res => {
-				this.showToast(
-					res.data.msg,
-					{
-						icon: this.toastIcon,
-						position: this.toastPosition,
-						duration: this.toastDuration,
-						fullWidth: this.isToastFullWidth,
-					},
-				)
-			})
-			.catch(error => {
-				this.showToast(
-					error,
-					{
-						icon: this.toastIcon,
-						position: this.toastPosition,
-						duration: this.toastDuration,
-						fullWidth: this.isToastFullWidth,
-					},
-				)
-			})
+      this.$axios.post('/api/wxpusher/signup', {
+        token: this.token,
+        mobile: this.mobile,
+        account: this.account,
+        password: this.password,
+      })
+        .then(res => {
+          this.showToast(
+            res.data.msg,
+            {
+              icon: this.toastIcon,
+              position: this.toastPosition,
+              duration: this.toastDuration,
+              fullWidth: this.isToastFullWidth,
+            },
+          )
+        })
+        .catch(error => {
+          this.showToast(
+            error,
+            {
+              icon: this.toastIcon,
+              position: this.toastPosition,
+              duration: this.toastDuration,
+              fullWidth: this.isToastFullWidth,
+            },
+          )
+        })
     },
   },
   computed: {
